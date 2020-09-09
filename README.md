@@ -242,6 +242,8 @@ Adicione o arquivo `ecosystem.config.yml`. O arquivo deverá realizar as seguint
   **importante**: O arquivo `ecosystem` deve ter a extensão yml e não yaml.
 
   O que será testado:
+  - Se o ecosystem tem a propriedade name
+  - Se o script a ser executado é o index.js.
   - Se o modo de execução está configurado para cluster.
   - Se o numero de instancias está definido como 2.
   - Se o modo watch esta configurado para estar desativado.
