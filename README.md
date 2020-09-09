@@ -347,9 +347,10 @@ Utilize a estratégia de multi-ambientes no frontend. Para isso:
 
    - Renomeie o remote atual para `development`;
 
-   - O nome do seu app no heroku deve ser seu nome de usuário do github seguido de "-st-frontend-prod". Por exemplo, se o seu usuário do github for "student", o nome do seu app será "student-st-frontend-prod" e a url ***precisar ser*** https://student-st-frontend.herokuapp.com/.
 
    - Faça o deploy do novo ambiente, conforme [requisito 9](#9---Deploy-Heroku).
+
+   - O nome do seu novo app no heroku deve ser seu nome de usuário do github seguido de "-st-frontend-prod". Por exemplo, se o seu usuário do github for "student", o nome do seu app será "student-st-frontend-prod" e a url ***precisar ser*** https://student-st-frontend-prod.herokuapp.com/.
 
    - Adicione um item ao frontend que identifique o layout como rodando em modo de "desenvolvimento". Esse tag item **deve** conter o o texto "Em desenvolvimento"
 
