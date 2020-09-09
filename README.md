@@ -216,7 +216,7 @@ Altere o backend para utilizar variáveis de ambiente para contrololar os seguin
 
    O que será testado:
    - Se existe a variável de ambiente PORT.
-   - Se a variável de ambiente é UPSIDEDOWN_MODE e se ela é um boleano.
+   - Se a variável de ambiente UPSIDEDOWN_MODE existe e se ela é um boleano.
 
 **Sugestão**: você pode definir os valores das _envs vars_ (variáveis de ambiente) localmente, no seu SO (Sistema operacional), para validar os comportamentos.
 
@@ -245,7 +245,7 @@ Adicione o arquivo `ecosystem.config.yml`. O arquivo deverá realizar as seguint
   - Se o modo de execução está configurado para cluster.
   - Se o numero de instancias está definido como 2.
   - Se o modo watch esta configurado para estar desativado.
-  - Se a reiniciação de memória máxima esta configurada como 200M
+  - Se a reiniciação de memória máxima esta configurada como 200M.
 
 
 #### 4 - Scripts package.json
@@ -260,7 +260,7 @@ Execute ambos em sua máquina para validar se o comportamento é o esperado.
 
 O que será testado:
   - Se o comando `start` inicia o server com pm2 e se usa o ecosystem.
-  - Se o comando `start:dev` inicia o server com pm2, se não usa o ecosystem e abre em watchMode
+  - Se o comando `start:dev` inicia o server com pm2, se não usa o ecosystem e abre em watchMode.
 
 
 #### 5 - Procfile
@@ -273,7 +273,7 @@ O que será testado:
 - Se o dyno é do tipo web.
 - Se o script inicia o server com pm2 e se usa o ecosystem.
 
-#### 6 - Deploy Heroku
+#### 6 - Deploy no Heroku
 **IMPORTANTE**: Uma variável de ambiente com o nome GITHUB_USER deverá ser criada com o seu usuário do github.
 
 1. Crie dois `apps` do Heroku a partir do mesmo código fonte (código da API). O nome do seu app no heroku deverá conter seu nome de usuário no github seguido de "-hawkins-back" ou "-upside-down-back". Por exemplo, se seu nome de usuário no github for "student" seus app deverão ter o nome:
@@ -313,7 +313,7 @@ O que será testado:
 - Se existem as 4 variáveis de ambiente citadas acima.
 
 
-#### 9 - Deploy Heroku
+#### 9 - Deploy do frontend no Heroku
 **IMPORTANTE**: Assim como no backend, a variável de ambiente GITHUB_USER deverá ser criada com o seu usuário do github.
 
 Faça o deploy do front-end:
@@ -336,7 +336,7 @@ O que será testado:
   - Se ao visitar sua pagina no heroku, o botão de mudar de realidade existe.
   - Se a pesquisa funciona como deveria, fazendo chamada a API externa.
   - Se o botão de mudar de realidade funciona.
-  - Verifica se os botões de proxima pagina e pagina anterior funcionam.  
+  - Se os botões de proxima pagina e pagina anterior funcionam.  
 
 
 ### Bônus
