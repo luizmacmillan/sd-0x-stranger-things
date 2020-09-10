@@ -174,6 +174,22 @@ Desse modo, ao "alternar entre os universos", vamos realizar chamadas a API's di
 
 No exemplo pré-programado, em um dos "universos", chamamos um serviço na porta `3002` e o outro serviço na porta `3003`. Exploraremos esse comportamento durante o projeto.
 
+#### Monitoramento
+Para monitorar sua aplicaçao no heroku usando o dashboard do PM2, siga os passos abaixo:
+
+1.Crie um novo `bucket` no dashboard de monitoramento web do `PM2`. Em seguida, pelo dashboard, adicione as chaves criadas aos `apps` do Heroku criados anteriomente.
+
+2.Deverão ser adicionadas três variáveis para cada app:
+
+   - O nome do server. No caso, utilizaremos um nome diferente para cada um dos apps;
+
+   - Chave pública;
+
+   - Chave privada.
+
+3.Verifique no Dashboard se os processos estão sendo exibidos e monitorados.
+
+
 ## Desenvolvimento
 
 O código não está utilizando variáveis de ambiente. Você vai configurá-lo para utilizá-las, tornando parametrizáveis a porta e o _modo upside down_.
@@ -194,15 +210,22 @@ Os requisitos estão agrupados por `frontend` e `backend`. Realize as alteraçõ
 
 Altere o backend para utilizar variáveis de ambiente para contrololar os seguintes comportamentos:
 
-   1. A porta que a API escutará;
+   1. A porta que a API escutará, essa variável deve ter, nescessáriamente, o nome PORT.
 
-   2. O modo "upsideDown". Essa variável espera um valor boleano. Lembre-se que as variáveis de ambeinte são `strings`.
+   2. O modo "upsideDown". Essa variável espera um valor boleano e deverá se chamar UPSIDEDOWM_MODE. Lembre-se que as variáveis de ambinte são `strings`.
+
+   O que será testado:
+   - Se existe a variável de ambiente PORT.
+   - Se a variável de ambiente UPSIDEDOWN_MODE existe e se ela é um boleano.
 
 **Sugestão**: você pode definir os valores das _envs vars_ (variáveis de ambiente) localmente, no seu SO (Sistema operacional), para validar os comportamentos.
 
 #### 2 - Módulo PM2
 
 Adicione o módulo PM2 à API.
+
+O que será testado:
+ - Se o modulo pm2 esta instalado nas dependências de desenvolvimento.
 
 #### 3 - Ecosystem
 
@@ -216,6 +239,17 @@ Adicione o arquivo `ecosystem.config.yml`. O arquivo deverá realizar as seguint
 
   4. Reiniciar o processo caso ele consuma mais de 200MB de memória.
 
+  **importante**: O arquivo `ecosystem` deve ter a extensão yml e não yaml.
+
+  O que será testado:
+  - Se o ecosystem tem a propriedade name
+  - Se o script a ser executado é o index.js.
+  - Se o modo de execução está configurado para cluster.
+  - Se o numero de instancias está definido como 2.
+  - Se o modo watch esta configurado para estar desativado.
+  - Se a reiniciação de memória máxima esta configurada como 200M.
+
+
 #### 4 - Scripts package.json
 
 Adicione/altere dois `scripts` no `package.json`:
@@ -226,19 +260,29 @@ Adicione/altere dois `scripts` no `package.json`:
 
 Execute ambos em sua máquina para validar se o comportamento é o esperado.
 
+O que será testado:
+  - Se o comando `start` inicia o server com pm2 e se usa o ecosystem.
+  - Se o comando `start:dev` inicia o server com pm2, se não usa o ecosystem e abre em watchMode.
+
+
 #### 5 - Procfile
 
 Defina um arquivo `Procfile`, utilizando a mesma configuração do script `start` do `package.json`: iniciar o server utilizando o módulo do `PM2`, apontando para o arquivo `ecosystem` criado anteriormente.
 
 Lembre-se: como nossos serviços receberão acessos HTTP externos, precisamos definir os `Dynos` como sendo do tipo `web`.
 
-#### 6 - Deploy Heroku
+O que será testado:
+- Se o dyno é do tipo web.
+- Se o script inicia o server com pm2 e se usa o ecosystem.
 
-1. Crie dois `apps` do Heroku a partir do mesmo código fonte (código da API). Utilize os seguintes remotes:
+#### 6 - Deploy no Heroku
+**IMPORTANTE**: Uma variável de ambiente com o nome GITHUB_USER deverá ser criada com o seu usuário do github.
 
-   - hawkins;
+1. Crie dois `apps` do Heroku a partir do mesmo código fonte (código da API). O nome do seu app no heroku deverá conter seu nome de usuário no github seguido de "-hawkins-back" ou "-upside-down-back". Por exemplo, se seu nome de usuário no github for "student" seus app deverão ter o nome:
 
-   - upside-down.
+   - student-hawkins-back;
+
+   - student-upside-down-back.
 
 2. Configure a variável de ambiente criada para controlar o modo `upsideDown`. Cada um dos `apps` deverá ter valores distintos, da seguinte maneira:
 
@@ -249,24 +293,11 @@ Lembre-se: como nossos serviços receberão acessos HTTP externos, precisamos de
 3. Utilizando o `git`, faça o deploy de ambos os `apps` no Heroku.
 
 Acesse os URLs geradas e valide se ambas as API's estão no ar e funcionando como esperado.
+**Importante**: As URLS deverão ser geradas pelo heroku e não devem ser modificadas.
 
-**Adicione os comandos utilizados, de maneira sequencial, ao README.md do backend.**
-
-#### 7 - Monitoramento
-
-Crie um novo `bucket` no dashboard de monitoramento web do `PM2`. Em seguida, pelo dashboard, adicione as chaves criadas aos `apps` do Heroku criados anteriomente.
-
-Deverão ser adicionadas três variáveis para cada app:
-
-   - O nome do server. No caso, utilizaremos um nome diferente para cada um dos apps;
-
-   - Chave pública;
-
-   - Chave privada.
-
-Verifique no Dashboard se os processos estão sendo exibidos e monitorados.
-
-**Adicione os comandos utilizados ao README.md. Lembre-se que as chaves são dados sensíveis, pricipalmente a privada, então não é necessário registrar seu valor real no README.md, no lugar basta colocar algo como "CHAVE_PRIVADA_AQUI"**
+O que será testado:
+  - Se ao fazer uma requisição do tipo GET para o endpoint da api Hawkins serão retornadas as informações corretas.
+  - Se ao fazer uma requisição do tipo GET para o endpoint da api upsideDown serão retornadas as informações corretas.
 
 ### Frontend
 
@@ -276,11 +307,22 @@ Altere o frontend para utilizar variáveis de ambiente para controlar as **URLs*
 
 Perceba que o código está esperando por duas **APIs**. Uma para o modo `upside-down` e a outra para o modo normal.
 
-#### 9 - Deploy Heroku
+O nome das variáveis deve ser o seguinte:
+- REACT_APP_HAWKINS_URL e REACT_APP_HAWKINS_TIMEOUT para a URL e o TIMEOUT do seu backend hawkins.
+- REACT_APP_UPSIDEDOWN_URL e REACT_APP_UPSIDEDOWN_TIMEOUT para a URL e o TIMEOUT do seu backend UPSIDEDOWN.
+
+O que será testado:
+- Se existem as 4 variáveis de ambiente citadas acima.
+
+
+#### 9 - Deploy do frontend no Heroku
+**IMPORTANTE**: Assim como no backend, a variável de ambiente GITHUB_USER deverá ser criada com o seu usuário do github.
 
 Faça o deploy do front-end:
 
    1. Crie um app do Heroku com o front-end. Não é necessário a criação do `Procfile` aqui. Vamos deixar o Heroku utilizar as configurações padrões. No momento de criar o app do Heroku, utilize o `buildpack` descrito abaixo, em **Dicas**.
+
+   2. O nome do seu app no heroku deve ser seu nome de usuário do github seguido de "-st-frontend". Por exemplo, se o seu usuário do github for "student", o nome do seu app será "student-st-frontend" e a url ***precisar ser*** https://student-st-frontend.herokuapp.com/.
 
    2. Configure as variáveis de ambiente do app para apontar para as API's publicadas.
 
@@ -292,27 +334,34 @@ Para publicar seu frontend React, utilize o buildpack [mars/create-react-app](ht
 
 Lembre-se de que é possível testar o comportamento definindo as variáveis de ambiente em sua máquina. Você pode fazê-las apontar tanto para o backend rodando localmente em sua máquina, quanto para as APIs já publicadas nos requisitos anteriores.
 
-**Adicione os comandos utilizados, de maneira sequencial, ao README.md do frontend.**
+O que será testado:
+  - Se ao visitar sua pagina no heroku, o botão de mudar de realidade existe.
+  - Se a pesquisa funciona como deveria, fazendo chamada a API externa.
+  - Se o botão de mudar de realidade funciona.
+  - Se os botões de proxima pagina e pagina anterior funcionam.  
+
 
 ### Bônus
 
-### 10 - Multi-ambientes
+### 10 - Multi-ambientes e Development Mode.
 
 Utilize a estratégia de multi-ambientes no frontend. Para isso:
 
    - Renomeie o remote atual para `development`;
 
-   - Crie um novo remote a partir do mesmo código fonte chamado `production`;
 
    - Faça o deploy do novo ambiente, conforme [requisito 9](#9---Deploy-Heroku).
 
-**Adicione os comandos utilizados, de maneira sequencial, ao README.md do frontend.**
+   - O nome do seu novo app no heroku deve ser seu nome de usuário do github seguido de "-st-frontend-prod". Por exemplo, se o seu usuário do github for "student", o nome do seu app será "student-st-frontend-prod" e a url ***precisar ser*** https://student-st-frontend-prod.herokuapp.com/.
 
-### 11 - Development Mode
+   - Adicione um item ao frontend que identifique o layout como rodando em modo de "desenvolvimento". Esse tag item **deve** conter o o texto "Em desenvolvimento"
 
-Adicione um item ao frontend que identifique o layout como rodando em modo de "desenvolvimento". Pode ser um componente flutuante bem explícito.
+   - Lembre-se de criar uma variável de ambiente para controlar esse comportamento, e configurá-la nos apps publicados. Para isso, utilize a variável `NODE_ENV`.
 
-Lembre-se de criar uma variável de ambiente para controlar esse comportamento, e configurá-la nos apps publicados. Você pode utilizar a variável `NODE_ENV`.
+O que será testado:
+ - Se ao acessar o frontend de desenvolvimento, haverá a tag com o texto "em desenvolvimento"
+ - Se ao acessar o frontend de produção, não haverá a tag.
+
 
 ---
 
