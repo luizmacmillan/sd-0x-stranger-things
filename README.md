@@ -296,7 +296,7 @@ Altere o backend para utilizar variáveis de ambiente para contrololar os seguin
    - Se existe a variável de ambiente PORT.
    - Se a variável de ambiente UPSIDEDOWN_MODE existe e se ela é um boleano.
 
-**Sugestão**: você pode definir os valores das _envs vars_ (variáveis de ambiente) localmente, no seu SO (Sistema operacional), para validar os comportamentos.
+**Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando no seu PR(Pull Request). ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
 
 #### 2 - Módulo PM2
 
@@ -391,6 +391,8 @@ O nome das variáveis deve ser o seguinte:
 O que será testado:
 - Se existem as 4 variáveis de ambiente citadas acima.
 
+**Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando no seu PR(Pull Request). ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
+
 #### 9 - Deploy do frontend no Heroku
 **IMPORTANTE**: Assim como no backend, a variável de ambiente GITHUB_USER deverá ser criada com o seu usuário do github.
 
@@ -430,7 +432,7 @@ Utilize a estratégia de multi-ambientes no frontend. Para isso:
 
    - Adicione um item ao frontend que identifique o layout como rodando em modo de "desenvolvimento". Esse tag item **deve** conter o o texto "Em desenvolvimento"
 
-   - Lembre-se de criar uma variável de ambiente para controlar esse comportamento, e configurá-la nos apps publicados. Para isso, utilize a variável `NODE_ENV`.
+   - Lembre-se de criar uma variável de ambiente para controlar esse comportamento, e configurá-la nos apps publicados.
 
 O que será testado:
  - Se ao acessar o frontend de desenvolvimento, haverá a tag com o texto "em desenvolvimento"
