@@ -391,7 +391,7 @@ O nome das variáveis deve ser o seguinte:
 O que será testado:
 - Se existem as 4 variáveis de ambiente citadas acima.
 
-**Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando para no seu PR. ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
+**Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando no seu PR(Pull Request). ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
 
 #### 9 - Deploy do frontend no Heroku
 **IMPORTANTE**: Assim como no backend, a variável de ambiente GITHUB_USER deverá ser criada com o seu usuário do github.
