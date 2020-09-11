@@ -296,7 +296,7 @@ Altere o backend para utilizar variáveis de ambiente para contrololar os seguin
    - Se existe a variável de ambiente PORT.
    - Se a variável de ambiente UPSIDEDOWN_MODE existe e se ela é um boleano.
 
-**Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando para no seu PR. ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
+**Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando no seu PR(Pull Request). ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
 
 #### 2 - Módulo PM2
 
