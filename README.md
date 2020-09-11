@@ -1,8 +1,86 @@
-# Boas vindas ao repositório do projeto de Deploy - Stranger Things!
+# Boas vindas ao repositório do projeto Stranger Things!
 
-Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
+Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por Slack! #vqv 🚀
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
+Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um Pull Request para colocar seus códigos.
+
+---
+
+## Instruções para entregar seu projeto:
+
+### ANTES DE COMEÇAR A DESENVOLVER:
+
+1. Clone os **dois** repositórios
+
+- `git clone https://github.com/tryber/sd-0x-stranger-things-backend.git`.
+- `git clone https://github.com/tryber/sd-0x-stranger-things-frontend.git`.
+
+2. Navegue entre as pastas dos repositórios que você acabou de clonar
+
+- `cd sd-0x-stranger-things-backend`
+- `cd sd-0x-stranger-things-frontend`
+
+3. Instale as dependências dos dois projetos
+
+- `npm install`
+
+3. Para rodar localmentes os projetos, execute o script de start do `package.json`.
+
+- `npm start`
+
+4. Crie uma branch a partir da branch `master` para cada um dos repositórios.
+
+- Verifique que você está na branch `master`
+  - Exemplo: `git branch`
+- Se não estiver, mude para a branch `master`
+  - Exemplo: `git checkout master`
+- Agora crie uma branch à qual você vai submeter os `commits` dos seus projetos
+  - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
+  - Exemplo:
+    - `git checkout -b joaozinho-sd-0x-stranger-things-backend`
+    - `git checkout -b joaozinho-sd-0x-stranger-things-frontend`
+
+1. Clone o repositório
+  * `git clone https://github.com/betrybe/sd-0x-stranger-things.git`.
+  * Entre na pasta do repositório que você acabou de clonar:
+    * `cd sd-0x-stranger-things`
+
+4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+  * Verifique que as mudanças ainda não estão no _stage_
+    * Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
+  * Adicione o novo arquivo ao _stage_ do Git
+      * Exemplo:
+        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
+        * `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
+  * Faça o `commit` inicial
+      * Exemplo:
+        * `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
+        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+
+5. Adicione a sua branch com o novo `commit` ao repositório remoto
+
+  - Usando o exemplo anterior:
+    - `git push -u origin joaozinho-sd-0x-stranger-things-backend`
+    - `git push -u origin joaozinho-sd-0x-stranger-things-frontend`
+
+6. Crie um novo `Pull Request` _(PR)_
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-stranger-things/pulls)
+  * Clique no botão verde _"New pull request"_
+  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
+  * Clique no botão verde _"Create pull request"_
+  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
+  * **Não se preocupe em preencher mais nada por enquanto!**
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-stranger-things/pulls) e confira que o seu _Pull Request_ está criado
+
+---
+
+# Entregáveis
+
+Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
+
+Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
+
+---
 
 ## O que deverá ser desenvolvido
 
@@ -14,9 +92,9 @@ Você vai adaptar e configurar os projetos descritos nesse README para que seja 
 
 Esse repositório contém as instruções e os requisitos para o projeto de Deploy com Heroku e PM2. O código base para o desenvolvimento do projeto está dividido em duas partes: uma API de backend utilizando Node.js e Express e um frontend com React. Abaixo estão disponíveis os links de acesso aos respectivos repositórios:
 
-- [Repositório com o frontend](https://github.com/tryber/sd-01-block31-stranger-things-frontend);
+- [Repositório com o frontend](https://github.com/tryber/sd-0x-stranger-things-frontend);
 
-- [Repositório com o backend](https://github.com/tryber/sd-01-block31-stranger-things-backend).
+- [Repositório com o backend](https://github.com/tryber/sd-0x-stranger-things-backend).
 
 A seguir, temos algumas explicações sobre a estrutura base e alguns comportamentos dessas aplicações. Você explorará esses pontos durante o projeto, alterando o código preexistente.
 
@@ -175,6 +253,7 @@ Desse modo, ao "alternar entre os universos", vamos realizar chamadas a API's di
 No exemplo pré-programado, em um dos "universos", chamamos um serviço na porta `3002` e o outro serviço na porta `3003`. Exploraremos esse comportamento durante o projeto.
 
 #### Monitoramento
+
 Para monitorar sua aplicaçao no heroku usando o dashboard do PM2, siga os passos abaixo:
 
 1.Crie um novo `bucket` no dashboard de monitoramento web do `PM2`. Em seguida, pelo dashboard, adicione as chaves criadas aos `apps` do Heroku criados anteriomente.
@@ -188,7 +267,6 @@ Para monitorar sua aplicaçao no heroku usando o dashboard do PM2, siga os passo
    - Chave privada.
 
 3.Verifique no Dashboard se os processos estão sendo exibidos e monitorados.
-
 
 ## Desenvolvimento
 
@@ -249,7 +327,6 @@ Adicione o arquivo `ecosystem.config.yml`. O arquivo deverá realizar as seguint
   - Se o modo watch esta configurado para estar desativado.
   - Se a reiniciação de memória máxima esta configurada como 200M.
 
-
 #### 4 - Scripts package.json
 
 Adicione/altere dois `scripts` no `package.json`:
@@ -264,7 +341,6 @@ O que será testado:
   - Se o comando `start` inicia o server com pm2 e se usa o ecosystem.
   - Se o comando `start:dev` inicia o server com pm2, se não usa o ecosystem e abre em watchMode.
 
-
 #### 5 - Procfile
 
 Defina um arquivo `Procfile`, utilizando a mesma configuração do script `start` do `package.json`: iniciar o server utilizando o módulo do `PM2`, apontando para o arquivo `ecosystem` criado anteriormente.
@@ -276,6 +352,7 @@ O que será testado:
 - Se o script inicia o server com pm2 e se usa o ecosystem.
 
 #### 6 - Deploy no Heroku
+
 **IMPORTANTE**: Uma variável de ambiente com o nome GITHUB_USER deverá ser criada com o seu usuário do github.
 
 1. Crie dois `apps` do Heroku a partir do mesmo código fonte (código da API). O nome do seu app no heroku deverá conter seu nome de usuário no github seguido de "-hawkins-back" ou "-upside-down-back". Por exemplo, se seu nome de usuário no github for "student" seus app deverão ter o nome:
@@ -314,7 +391,6 @@ O nome das variáveis deve ser o seguinte:
 O que será testado:
 - Se existem as 4 variáveis de ambiente citadas acima.
 
-
 #### 9 - Deploy do frontend no Heroku
 **IMPORTANTE**: Assim como no backend, a variável de ambiente GITHUB_USER deverá ser criada com o seu usuário do github.
 
@@ -340,7 +416,6 @@ O que será testado:
   - Se o botão de mudar de realidade funciona.
   - Se os botões de proxima pagina e pagina anterior funcionam.  
 
-
 ### Bônus
 
 ### 10 - Multi-ambientes e Development Mode.
@@ -348,7 +423,6 @@ O que será testado:
 Utilize a estratégia de multi-ambientes no frontend. Para isso:
 
    - Renomeie o remote atual para `development`;
-
 
    - Faça o deploy do novo ambiente, conforme [requisito 9](#9---Deploy-Heroku).
 
@@ -362,83 +436,15 @@ O que será testado:
  - Se ao acessar o frontend de desenvolvimento, haverá a tag com o texto "em desenvolvimento"
  - Se ao acessar o frontend de produção, não haverá a tag.
 
-
----
-
-## Instruções para entregar seu projeto:
-
-### ANTES DE COMEÇAR A DESENVOLVER:
-
-1. Clone os **dois** repositórios
-
-- `git clone git@github.com:tryber/sd-01-block31-stranger-things-backend.git`.
-- `git clone git@github.com:tryber/sd-01-block31-stranger-things-frontend.git`.
-
-2. Navegue entre as pastas dos repositórios que você acabou de clonar
-
-- `cd sd-01-block31-stranger-things-backend`
-- `cd sd-01-block31-stranger-things-frontend`
-
-3. Instale as dependências dos dois projetos
-
-- `npm install`
-
-3. Para rodar localmentes os projetos, execute o script de start do `package.json`.
-
-- `npm start`
-
-4. Crie uma branch a partir da branch `master` para cada um dos repositórios.
-
-- Verifique que você está na branch `master`
-  - Exemplo: `git branch`
-- Se não estiver, mude para a branch `master`
-  - Exemplo: `git checkout master`
-- Agora crie uma branch à qual você vai submeter os `commits` dos seus projetos
-  - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-  - Exemplo:
-    - `git checkout -b joaozinho-stranger-things-backend`
-    - `git checkout -b joaozinho-stranger-things-frontend`
-
-5. Lembre-se: como você vai trabalhar com uma branch diferente da `master`, para fazer deploy no Heroku é preciso utilizar a sintaxe **nome-de-usuario-nome-do-projeto:master** no push. Por exemplo: `git push hawkins joaozinho-stranger-things-frontend:master`
-
-6. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-
-- Verifique que as mudanças ainda não estão no _stage_
-  - Exemplo: `git status` (deve aparecer listado o arquivo _README.md_ em vermelho)
-- Adicione o arquivo alterado ao _stage_ do Git
-  - Exemplo:
-    - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-    - `git status` (deve aparecer listado o arquivo _README.md.js_ em verde)
-- Faça o `commit` inicial
-  - Exemplo:
-    - `git commit -m 'iniciando o projeto Stranger Things'` (fazendo o primeiro commit)
-    - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-7. Adicione a sua branch com o novo `commit` ao repositório remoto
-
-- Usando o exemplo anterior:
-  - `git push -u origin joaozinho-stranger-things-frontend`
-  - `git push -u origin joaozinho-stranger-things-backend`
-
-8. Crie um novo `Pull Request` _(PR)_
-
-- Vá até a página de _Pull Requests_ do repositório no GitHub de ambos os projetos: [backend](https://github.com/tryber/sd-01-block31-stranger-things-backend/pulls) e [frontend](https://github.com/tryber/sd-01-block31-stranger-things-frontend/pulls)
-- Clique no botão verde _"New pull request"_
-- Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-- Clique no botão verde _"Create pull request"_
-- Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-- **Não se preocupe em preencher mais nada por enquanto!**
-- Volte até a página de _Pull Requests_ dos repositórios e confira que o seu _Pull Request_ está criado
-
 ---
 
 ### DURANTE O DESENVOLVIMENTO
 
-- Faça `commits` das alterações que você fizer no código regularmente
+* Faça `commits` das alterações que você fizer no código regularmente
 
-- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
+* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
 
-- Os comandos que você utilizará com mais frequência são:
+* Os comandos que você utilizará com mais frequência são:
   1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
   2. `git add` _(para adicionar arquivos ao stage do Git)_
   3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
@@ -447,23 +453,24 @@ O que será testado:
 
 ---
 
-### DEPOIS DE TERMINAR O DESENVOLVIMENTO
+### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
 
-Para **"entregar"** seu projeto, siga os passos a seguir:
+Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
 
-- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-02`
+* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
 
-Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
+  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+
+  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+
+  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-0x`.
+
+Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
 ---
 
 ### REVISANDO UM PULL REQUEST
 
-⚠⚠⚠
+Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
 
-À medida que você e os outros alunos forem entregando os projetos, vocês serão alertados **via Slack** para também fazer a revisão dos _Pull Requests_ dos seus colegas. Fiquem atentos às mensagens do _"Pull Reminders"_ no _Slack_!
-
-Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
+#VQV
