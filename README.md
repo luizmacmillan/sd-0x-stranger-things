@@ -353,7 +353,7 @@ O que será testado:
 
 #### 6 - Deploy no Heroku
 
-**IMPORTANTE**: Uma variável de ambiente com o nome GITHUB_USER deverá ser criada com o seu usuário do github.
+**IMPORTANTE**: Uma variável de ambiente com o nome GITHUB_USER_TEST deverá ser criada com o seu usuário do github.
 
 1. Crie dois `apps` do Heroku a partir do mesmo código fonte (código da API). O nome do seu app no heroku deverá conter seu nome de usuário no github seguido de "-hawkins-back" ou "-upside-down-back". Por exemplo, se seu nome de usuário no github for "student" seus app deverão ter o nome:
 
@@ -394,7 +394,7 @@ O que será testado:
 **Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando no seu PR(Pull Request). ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
 
 #### 9 - Deploy do frontend no Heroku
-**IMPORTANTE**: Assim como no backend, a variável de ambiente GITHUB_USER deverá ser criada com o seu usuário do github.
+**IMPORTANTE**: Assim como no backend, a variável de ambiente GITHUB_USER_TEST deverá ser criada com o seu usuário do github.
 
 Faça o deploy do front-end:
 
