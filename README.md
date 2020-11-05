@@ -76,7 +76,11 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 # Entregáveis
 
-Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
+Para entregar o seu projeto você deverá criar um Pull Request em **cada um destes** repositórios:
+
+- [Repositório com o frontend](https://github.com/tryber/sd-0x-stranger-things-frontend);
+
+- [Repositório com o backend](https://github.com/tryber/sd-0x-stranger-things-backend).
 
 Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
 
@@ -274,7 +278,7 @@ O código não está utilizando variáveis de ambiente. Você vai configurá-lo 
 
 Em seguida, você deverá adicionar o modulo `PM2` ao projeto utilizando o arquivo `ecosystem`, fazendos as adaptações necessárias no `package.json`.
 
-Você vai realizar o deploy do projeto (frontend e backend) no _Heroku_. Para isso, você deverá prepará-los, adicionando os respectivos `Procfiles`. Eles deverão apontar para os scripts adicionados ao `package.json` que utilizam o `PM2`. Por último, você deverá realizar o deploy do projeto, conforme requisitos, no _Heroku_. Os comandos utilizados deverão ser adicionados no README.md de cada projeto.
+Você vai realizar o deploy do projeto (frontend e backend) no _Heroku_. Para isso, você deverá prepará-los, adicionando os respectivos `Procfiles`. Eles deverão apontar para os scripts adicionados ao `package.json` que utilizam o `PM2`. Por último, você deverá realizar o deploy do projeto, conforme requisitos, no _Heroku_. Os comandos utilizados deverão ser adicionados no README.md de cada projeto. Para mais informações sobre - [Procfiles](https://app.betrybe.com/course/back-end/infrastructure/deploy/heroku#introducao-ao-heroku) e [ecosystem](https://app.betrybe.com/course/back-end/infrastructure/deploy/process-manager#ecosystem-file) visite o Coruse.
 
 Todos esses passos estão detalhados nos requisitos abaixos.
 
@@ -307,7 +311,7 @@ O que será testado:
 
 #### 3 - Ecosystem
 
-Adicione o arquivo `ecosystem.config.yml`. O arquivo deverá realizar as seguintes configurações:
+Adicione o [arquivo](https://app.betrybe.com/course/back-end/infrastructure/deploy/process-manager#ecosystem-file) `ecosystem.config.yml`. O arquivo deverá realizar as seguintes configurações:
 
   1. Ativar o Modo Cluster;
 
@@ -343,7 +347,7 @@ O que será testado:
 
 #### 5 - Procfile
 
-Defina um arquivo `Procfile`, utilizando a mesma configuração do script `start` do `package.json`: iniciar o server utilizando o módulo do `PM2`, apontando para o arquivo `ecosystem` criado anteriormente.
+Defina um [arquivo](https://app.betrybe.com/course/back-end/infrastructure/deploy/heroku#introducao-ao-heroku) `Procfile`, utilizando a mesma configuração do script `start` do `package.json`: iniciar o server utilizando o módulo do `PM2`, apontando para o arquivo `ecosystem` criado anteriormente.
 
 Lembre-se: como nossos serviços receberão acessos HTTP externos, precisamos definir os `Dynos` como sendo do tipo `web`.
 
