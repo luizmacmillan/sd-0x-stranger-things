@@ -76,10 +76,6 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 
 Você vai adaptar e configurar os projetos descritos nesse README para que seja feito o deploy deles. Você vai colocar os projetos frontend e backend no ar com o `Heroku`, utilizando o `PM2` para gerenciar e monitorar os processos. Além disso, você vai alterar alguns comportamentos aplicando os conceitos vistos no conteúdo.
 
-![image](preview.gif)
-
-Você precisará implementar componentes que em conjunto resultarão na biblioteca de cartões de filmes dinâmica.
-
 ## Desenvolvimento
 
 Adapte e configure os projetos descritos nesse *README* para que seja feito o deploy por meio do `Heroku` e monitorado pelo gerenciador do `PM2`.
