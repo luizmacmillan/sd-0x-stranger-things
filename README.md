@@ -96,8 +96,8 @@ Adapte e configure os projetos descritos nesse *README* para que seja feito o de
 
 2. Navegue entre as pastas dos repositórios que você acabou de clonar
 
-- `cd sd-04-stranger-things-backend`
-- `cd sd-04-stranger-things-frontend`
+- `cd sd-0x-stranger-things-backend`
+- `cd sd-0x-stranger-things-frontend`
 
 3. Instale as dependências dos dois projetos
 
@@ -126,7 +126,7 @@ Adapte e configure os projetos descritos nesse *README* para que seja feito o de
     - `git push -u origin joaozinho-sd-0x-stranger-things-frontend`
 
 6. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-04-stranger-things/pulls)
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-stranger-things/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
