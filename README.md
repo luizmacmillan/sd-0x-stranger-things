@@ -92,8 +92,7 @@ Adapte e configure os projetos descritos nesse *README* para que seja feito o de
 1. Clone os **dois** repositórios
 
 - `git clone https://github.com/tryber/sd-0x-stranger-things-backend.git`.
-- `git clone https://github.com/tryber/sd-0x
-- -stranger-things-frontend.git`.
+- `git clone https://github.com/tryber/sd-0x-stranger-things-frontend.git`.
 
 2. Navegue entre as pastas dos repositórios que você acabou de clonar
 
