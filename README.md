@@ -64,9 +64,9 @@ Nesse projeto, você será capaz de:
 
 Para entregar o seu projeto você deverá criar um Pull Request em **cada um destes** repositórios:
 
-- [Repositório com o frontend](https://github.com/tryber/sd-0x-stranger-things-frontend);
+- [Repositório com o backend](https://github.com/betrybe/sd-0x-stranger-things-backend).
 
-- [Repositório com o backend](https://github.com/tryber/sd-0x-stranger-things-backend).
+- [Repositório com o frontend](https://github.com/betrybe/sd-0x-stranger-things-frontend);
 
 Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
 
@@ -194,6 +194,17 @@ ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠️
 ---
 
 ## Testes
+
+### Backend
+
+Todos os requisitos do projeto serão testados **automaticamente** por meio do `Jest`. Basta executar o comando abaixo:
+
+```bash
+npm test
+```
+
+
+### Frontend
 
 Todos os requisitos do projeto serão testados **automaticamente** por meio do `Cypress`. Basta executar um dos comandos abaixo:
 
