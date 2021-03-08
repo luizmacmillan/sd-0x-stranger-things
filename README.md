@@ -89,79 +89,52 @@ Adapte e configure os projetos descritos nesse *README* para que seja feito o de
 
 ## Antes de começar a desenvolver:
 
-1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-0x-project-movie-card-library-stateful.git`.
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-0x-project-movie-card-library-stateful`
+1. Clone os **dois** repositórios
 
-2. Instale as dependências, inicialize o projeto e rode os testes
-  * Instale as dependências:
-    * `npm install`
-  * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
-  * Verifique que os testes estão executando:
-    * `npm test` (os testes devem rodar e falhar)
+- `git clone https://github.com/tryber/sd-0x-stranger-things-backend.git`.
+- `git clone https://github.com/tryber/sd-0x
+- -stranger-things-frontend.git`.
 
-3. Crie uma branch a partir da branch `master`
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
-    * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-movie-card-library-stateful`
+2. Navegue entre as pastas dos repositórios que você acabou de clonar
 
-4. Faça alterações em algum dos componentes que precisam de implementação, por exemplo o `MovieLibrary` em `src/components`:
-```jsx
-import React, { Component } from 'react';
+- `cd sd-04-stranger-things-backend`
+- `cd sd-04-stranger-things-frontend`
 
-import MovieList from './MovieList';
-import SearchBar from './SearchBar';
-import AddMovie from './AddMovie';
+3. Instale as dependências dos dois projetos
 
-class MovieLibrary extends Component {
-  constructor(props) {
-    super(props);
-  }
+- `npm install`
 
-  render() {
-    return (
-      <div>
-        <h2> My awesome movie library </h2>
-        <SearchBar />
-        <MovieList movies={this.props.movies} />
-        <AddMovie />
-      </div>
-    );
-  }
-}
+3. Para rodar localmentes os projetos, execute o script de start do `package.json`.
 
-export default MovieLibrary;
-```
+- `npm start`
 
-5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-  * Verifique que as mudanças ainda não estão no _stage_
-    * Exemplo: `git status` (deve aparecer listado o arquivo _src/components/MovieLibrary.jsx_ em vermelho)
-  * Adicione o arquivo alterado ao _stage_ do Git
-      * Exemplo:
-        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (deve aparecer listado o arquivo _src/components/MovieLibrary.jsx_ em verde)
-  * Faça o `commit` inicial
-      * Exemplo:
-        * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
-        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+4. Crie uma branch a partir da branch `master` para cada um dos repositórios.
 
-6. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-movie-cards-library-stateful`
+- Verifique que você está na branch `master`
+  - Exemplo: `git branch`
+- Se não estiver, mude para a branch `master`
+  - Exemplo: `git checkout master`
+- Agora crie uma branch à qual você vai submeter os `commits` dos seus projetos
+  - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
+  - Exemplo:
+    - `git checkout -b joaozinho-sd-0x-stranger-things-backend`
+    - `git checkout -b joaozinho-sd-0x-stranger-things-frontend`
+    
+5. Adicione a sua branch com o novo `commit` ao repositório remoto
 
-7. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-project-movie-card-library-stateful/pulls)
+  - Usando o exemplo anterior:
+    - `git push -u origin joaozinho-sd-0x-stranger-things-backend`
+    - `git push -u origin joaozinho-sd-0x-stranger-things-frontend`
+
+6. Crie um novo `Pull Request` _(PR)_
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-04-stranger-things/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
   * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-project-movie-card-library-stateful/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-stranger-things-frontend/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-stranger-things-backend/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 
