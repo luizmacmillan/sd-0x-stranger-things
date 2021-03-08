@@ -474,7 +474,7 @@ Adicione o [arquivo](https://app.betrybe.com/course/back-end/infrastructure/depl
   - Se o modo de execução está configurado para cluster.
   - Se o numero de instancias está definido como 2.
   - Se o modo watch esta configurado para estar desativado.
-  - Se a reiniciação de memória máxima esta configurada como 200M.
+  - Se a reiniciação de memória máxima esta configurada como 200M. [Documentação do pm2](https://pm2.keymetrics.io/docs/usage/memory-limit)
 
 #### 4 - Scripts package.json
 
