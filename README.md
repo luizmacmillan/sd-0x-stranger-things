@@ -447,7 +447,7 @@ Os requisitos estão agrupados por `frontend` e `backend`. Realize as alteraçõ
 
 ### Backend
 
-#### 1 - Variáveis de ambiente
+#### 1 - Verifica as variáveis de ambiente
 
 Altere o backend para utilizar variáveis de ambiente para contrololar os seguintes comportamentos:
 
@@ -461,14 +461,14 @@ Altere o backend para utilizar variáveis de ambiente para contrololar os seguin
 
 **Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando no seu PR(Pull Request). ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
 
-#### 2 - Módulo PM2
+#### 2 - Verifica se o módulo pm2 foi instalado no projeto
 
 Adicione o módulo PM2 à API.
 
 O que será testado:
  - Se o módulo `pm2` esta instalado nas dependências.
 
-#### 3 - Ecosystem
+#### 3 - Verifica a configuração do ecosystem.config.yml
 
 Adicione o [arquivo](https://app.betrybe.com/course/back-end/infrastructure/deploy/process-manager#ecosystem-file) `ecosystem.config.yml`. O arquivo deverá realizar as seguintes configurações:
 
@@ -490,7 +490,7 @@ Adicione o [arquivo](https://app.betrybe.com/course/back-end/infrastructure/depl
   - Se o modo watch esta configurado para estar desativado.
   - Se a reiniciação de memória máxima esta configurada como 200M. [Documentação do pm2](https://pm2.keymetrics.io/docs/usage/memory-limit)
 
-#### 4 - Scripts package.json
+#### 4 - Verifica se os scripts do package.json estão corretos
 
 Adicione/altere dois `scripts` no `package.json`:
 
@@ -504,7 +504,7 @@ O que será testado:
   - Se o comando `start` inicia o server com pm2 e se usa o ecosystem.
   - Se o comando `start:dev` inicia o server com pm2, se não usa o ecosystem e abre em watchMode.
 
-#### 5 - Procfile
+#### 5 - Verifica a configuração do arquivo Procfile
 
 Defina um [arquivo](https://app.betrybe.com/course/back-end/infrastructure/deploy/heroku#introducao-ao-heroku) `Procfile`, utilizando a mesma configuração do script `start` do `package.json`: iniciar o server utilizando o módulo do `PM2`, apontando para o arquivo `ecosystem` criado anteriormente.
 
@@ -514,7 +514,7 @@ O que será testado:
 - Se o dyno é do tipo web.
 - Se o script inicia o server com pm2 e se usa o ecosystem.
 
-#### 6 - Deploy no Heroku
+#### 6 - Verifica o Deploy no Heroku
 
 **IMPORTANTE**: Uma variável de ambiente com o nome GITHUB_USER deverá ser criada com o seu usuário do github.
 
@@ -543,7 +543,7 @@ O que será testado:
 
 ### Frontend
 
-#### 7 - Variáveis de Ambiente
+#### 7 - Verifica as variáveis de ambiente do frontend
 
 Altere o frontend para utilizar variáveis de ambiente para controlar as **URLs** e **Timeouts** de comunicação com a API.
 
@@ -558,7 +558,8 @@ O que será testado:
 
 **Importante**: Para esse projeto, as variáveis de ambiente devem ser definidas em um arquivo .env e o arquivo deve ser enviando no seu PR(Pull Request). ISSO NÃO É UMA PRÁTICA DE MERCADO, o arquivo .env deve ser sempre incluido do .gitignore pois contém informações sensíveis, aqui será enviado apenas por motivo de avaliação.
 
-#### 8 - Deploy do frontend no Heroku
+#### 8 - Verifica se foi feito o deploy do frontend no Heroku
+
 **IMPORTANTE**: Assim como no backend, a variável de ambiente GITHUB_USER
 
 deverá ser criada com o seu usuário do github.
@@ -587,7 +588,7 @@ O que será testado:
 
 ### Bônus
 
-#### 9 - Multi-ambientes e Development Mode.
+#### 9 - Verifica os multi-ambientes e modo de desenvolvimento.
 
 Utilize a estratégia de multi-ambientes no frontend. Para isso:
 
@@ -607,15 +608,36 @@ O que será testado:
 
 ---
 
+# Depois de terminar o desenvolvimento
+
+Para sinalizar que o seu projeto está pronto para o _"Code Review"_ de colegas, faça o seguinte:
+
+* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque as pessoas de quem quer receber o review:
+
+  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+
+  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+
+  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-0x`.
+
+Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
+
+---
+
+# Revisando um pull request
+
+Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
+
+\#VQV 🚀
+
+---
+
 # Avisos Finais
 
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o
-formulário. Leva menos de 3 minutos!
+Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
 Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos
-aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não
-se assuste se isso acontecer, ok?
+O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
 ---
