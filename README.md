@@ -592,15 +592,13 @@ O que será testado:
 
 Utilize a estratégia de multi-ambientes no frontend. Para isso:
 
-   - Renomeie o remote atual para `development`;
+   - Renomeie o remote atual para `remote-desenvolvimento`;
 
-   - Faça o deploy do novo ambiente, conforme [requisito 9](#9---Deploy-Heroku).
+   - Crie e faça o deploy de um novo app no Heroku, conforme [requisito 8](#8---deploy-do-frontend-no-heroku). O nome do seu novo app no heroku deve ser seu nome de usuário do github seguido de "-pd" ("pd" se refere à "produção", ou seja, não está em desenvolvimento). Por exemplo, se o seu usuário do github for "student", o nome do seu app será "student-pd" e a url ***precisar ser*** https://student-pd.herokuapp.com/.
 
-   - O nome do seu novo app no heroku deve ser seu nome de usuário do github seguido de "-pd". Por exemplo, se o seu usuário do github for "student", o nome do seu app será "student-pd" e a url ***precisar ser*** https://student-pd.herokuapp.com/.
+   - Adicione um elemento ao frontend que identifique que a aplicação está rodando em modo de "desenvolvimento". Esse elemento **deve** ser visível e conter o texto "Em desenvolvimento"
 
-   - Adicione um item ao frontend que identifique o layout como rodando em modo de "desenvolvimento". Esse tag item **deve** conter o o texto "Em desenvolvimento"
-
-   - Lembre-se de criar uma variável de ambiente para controlar esse comportamento, e configurá-la nos apps publicados.
+   - Lembre-se de criar uma variável de ambiente para controlar esse comportamento, e configurá-la nos apps publicados. Atente-se às regras de nomes para [váriáveis de ambiente utilizadas no React](https://create-react-app.dev/docs/adding-custom-environment-variables/).
 
 O que será testado:
  - Se ao acessar o frontend de desenvolvimento, haverá a tag com o texto "em desenvolvimento"
